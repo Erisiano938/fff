@@ -1,22 +1,20 @@
-
 'use client';
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function AcademyManager() {
+export default function AdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirection automatique vers la page d'accueil
-    router.push('/');
+    router.replace('/admin/dashboard');
   }, [router]);
 
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="text-center">
-        <div className="w-8 h-8 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <p className="text-gray-400">Redirection vers l'accueil...</p>
+        <div className="animate-spin w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+        <p className="text-gray-400">Redirection vers l'administration...</p>
       </div>
     </div>
   );
