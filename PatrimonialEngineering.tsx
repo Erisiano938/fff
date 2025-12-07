@@ -4538,48 +4538,6 @@ export default function PatrimonialEngineering() {
                     </div>
                   ))}
                 </div>
-
-                {/* Analyse de risque LMNP */}
-                <div className="mt-6 bg-black/40 border-2 border-amber-700 rounded-lg p-5">
-                  <h5 className="text-lg font-bold text-amber-400 mb-4 flex items-center">
-                    <i className="ri-shield-check-line mr-2"></i>
-                    Analyse de Risque Détaillée LMNP
-                  </h5>
-                  <div className="space-y-3">
-                    {[
-                      { facteur: 'Vacance locative', impact: 8, probabilite: 5, mitigation: 'Emplacement premium, gestion locative professionnelle' },
-                      { facteur: 'Travaux et entretien', impact: 6, probabilite: 8, mitigation: 'Provision pour travaux, garantie constructeur' },
-                      { facteur: 'Requalification fiscale', impact: 3, probabilite: 2, mitigation: 'Respect strict des conditions LMNP, comptabilité rigoureuse' },
-                      { facteur: 'Liquidité réduite', impact: 5, probabilite: 6, mitigation: 'Horizon d\'investissement long terme, épargne de précaution' },
-                      { facteur: 'Évolution du marché', impact: 7, probabilite: 4, mitigation: 'Diversification géographique, analyse de marché approfondie' }
-                    ].map((risk, index) => (
-                      <div key={index} className="bg-amber-900/20 border border-amber-700 rounded p-3">
-                        <div className="flex justify-between items-start mb-2">
-                          <span className="text-amber-300 font-medium">{risk.facteur}</span>
-                          <div className="flex space-x-2">
-                            <span className="text-xs text-amber-400">Impact: {risk.impact}/10</span>
-                            <span className="text-xs text-amber-400">Prob: {risk.probabilite}/10</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="flex-1 bg-black/40 rounded-full h-2">
-                            <div 
-                              className="bg-gradient-to-r from-amber-500 to-red-500 h-2 rounded-full"
-                              style={{ width: `${(risk.impact * risk.probabilite) / 10}%` }}
-                            ></div>
-                          </div>
-                          <span className="text-amber-400 text-xs font-bold">
-                            {((risk.impact * risk.probabilite) / 10).toFixed(0)}%
-                          </span>
-                        </div>
-                        <div className="text-amber-200 text-xs">
-                          <i className="ri-shield-line mr-1 text-green-400"></i>
-                          Mitigation: {risk.mitigation}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             )}
 
